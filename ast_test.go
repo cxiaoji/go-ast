@@ -19,7 +19,7 @@ func TestAstHelper_GetFileDesc(t *testing.T) {
 func TestAstHelper_GetPackage(t *testing.T) {
 
 	h := NewAstHelper(filePath)
-	pk, err := h.GetPackage()
+	pk, err := h.getPackage()
 	if err != nil {
 		t.Logf("err:%v", err)
 		return
@@ -29,7 +29,7 @@ func TestAstHelper_GetPackage(t *testing.T) {
 func TestAstHelper_GetImports(t *testing.T) {
 
 	h := NewAstHelper(filePath)
-	res, err := h.GetImports()
+	res, err := h.getImports()
 	if err != nil {
 		t.Logf("err:%v", err)
 		return
@@ -39,7 +39,7 @@ func TestAstHelper_GetImports(t *testing.T) {
 func TestAstHelper_GetStructDescs(t *testing.T) {
 
 	h := NewAstHelper(filePath)
-	res, err := h.GetStructDescs()
+	res, err := h.getStructDescs()
 	if err != nil {
 		t.Logf("err:%v", err)
 		return
