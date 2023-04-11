@@ -1,4 +1,4 @@
-module go-ast
+module github.com/cxiaoji/go-ast
 
 go 1.18
 
