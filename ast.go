@@ -415,3 +415,14 @@ func (h *AstHelper) splitFieldTags(tag string) map[string]string {
 	_ = json.Unmarshal([]byte(tag), &res)
 	return res
 }
+func (h *AstHelper) GetStructDesc(name string) *StructDesc {
+	if name == "" || len(h.FileDesc.StructDescs) == 0 {
+		return nil
+	}
+	for _, sd := range h.FileDesc.StructDescs {
+		if sd.Name == name {
+			return sd
+		}
+	}
+	return nil
+}
